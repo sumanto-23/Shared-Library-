@@ -8,8 +8,7 @@ def call(String name = 'test') {
         then:
         1 * script.sh(
                     """
-                    aws ecr get-login-password --region eu-west-2 \
-                    | docker login -u AWS https://066203203749.dkr.ecr.eu-west-2.amazonaws.com --password-stdin
+                    aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/o8e3g5w6
                     """
         )
     }
