@@ -2,7 +2,7 @@
 def call(String name = 'test') {
   echo "Hello, ${name}."
 }
-def "Test login to AWS ECR Docker Registry using AWS CLI 2"() {
+def login() {
         when:
             dockerEcr.loginToAWSECRDockerRegistry(2)
         then:
